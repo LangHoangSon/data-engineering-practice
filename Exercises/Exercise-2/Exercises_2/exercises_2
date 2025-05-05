@@ -1,0 +1,46 @@
+import requests
+from bs4 import BeautifulSoup
+import pandas as pd
+from io import StringIO
+
+# Bước 1: Truy cập trang web
+url = 'https://www.ncei.noaa.gov/data/local-climatological-data/access/2021/'
+response = requests.get(url)
+soup = BeautifulSoup(response.text, 'html.parser')
+
+# Bước 2: Tìm tệp có thời gian chỉnh sửa cuối cùng là '2024-01-19 10:27'
+target_timestamp = '2024-01-19 10:27'
+file_name = None
+
+# Tìm tất cả các hàng trong bảng
+rows = soup.find_all('tr')
+for row in rows:
+    cols = row.find_all('td')
+    if len(cols) >= 2:
+        timestamp = cols[1].text.strip()
+        if timestamp == target_timestamp:
+            file_name = cols[0].find('a').text.strip()
+            break
+
+if not file_name:
+    print("Không tìm thấy tệp với thời gian chỉnh sửa cuối cùng là 2024-01-19 10:27.")
+else:
+    # Bước 3: Tải xuống tệp
+    file_url = url + file_name
+    file_response = requests.get(file_url)
+    if file_response.status_code == 200:
+        # Bước 4: Đọc tệp bằng Pandas
+        csv_data = StringIO(file_response.text)
+        df = pd.read_csv(csv_data, encoding='utf-8')
+
+        # Kiểm tra xem cột 'HourlyDryBulbTemperature' có tồn tại không
+        if 'HourlyDryBulbTemperature' in df.columns:
+            # Bước 5: Tìm bản ghi có nhiệt độ khô cao nhất
+            max_temp = df['HourlyDryBulbTemperature'].max()
+            max_temp_records = df[df['HourlyDryBulbTemperature'] == max_temp]
+            print("Bản ghi có nhiệt độ khô cao nhất:")
+            print(max_temp_records)
+        else:
+            print("Cột 'HourlyDryBulbTemperature' không tồn tại trong tệp.")
+    else:
+        print(f"Không thể tải xuống tệp: {file_url}")
