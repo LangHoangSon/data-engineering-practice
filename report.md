@@ -1,4 +1,4 @@
-### Báo cáo Lab 8\
+### Báo cáo Lab 8
 ### Case-study 1: Xây dựng pipeline tự động cào và trực quan dữ liệu 
 Phương pháp: Sử dụng mô hình ETL (Extract, Transform, Load) để thực hiện và sử dụng AirFlow để tự động hóa pipeline
 Các bước:
@@ -21,7 +21,7 @@ B4: Trực quan hóa trên PowerBI
 Đây là cấu trúc thư mục của một dự án ETL & Data Warehouse cho E-commerce sử dụng Airflow và Python. Dưới đây là giải thích chi tiết cho từng phần:\
 1. config/: Có thể chứa các file cấu hình (config) như thông tin kết nối database, đường dẫn, biến môi trường,..
 2. dags/: Chứa các DAGs dùng cho AirFlow.
-Các file DAGs gồm:
+Các file DAGs gồm: <br>
 (+) e_commerce_dw_dag.py 
 (+) extract_data.py
 (+) transform_dim_*.py
