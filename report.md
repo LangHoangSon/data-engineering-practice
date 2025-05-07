@@ -43,113 +43,110 @@ Sử dụng Apache Airflow để lên lịch và theo dõi quá trình xử lý.
 Có hỗ trợ plugin mở rộng cho các database phổ biến. <br>
 
 ### Case-study 2: Xây dựng pipeline tự động cào dữ liệu và huấn luyện mô hình
-Mục tiêu: Xây dựng và chạy thử được các DAGs cơ bản đến nâng cao
-Công cụ: Sử dụng AirFlow để chạy pipeline với cài đặt thời gian
-Cấu trúc mô tả của 1 AirFlow\
+Mục tiêu: Xây dựng và chạy thử được các DAGs cơ bản đến nâng cao <br>
+Công cụ: Sử dụng AirFlow để chạy pipeline với cài đặt thời gian <br>
+Cấu trúc mô tả của 1 AirFlow <br>
 ![image](https://github.com/user-attachments/assets/1c40c9fc-d74c-47f6-9b61-5d852e5b6f5a)
 
 ![image](https://github.com/user-attachments/assets/64ebbf9c-180e-4f88-8670-582ca8d6a4b5)
 
 ### Tổng kết 
-Hiểu định nghĩa và cách hoạt động của DAGs, các Operators
-Nắm rõ được các ví dụ về việc khởi tạo và chạy thử pipeline
-Hiểu rõ hơn về việc huấn luyện model  trả về kết quả sau khi chạy
+Hiểu định nghĩa và cách hoạt động của DAGs, các Operators <br>
+Nắm rõ được các ví dụ về việc khởi tạo và chạy thử pipeline <br>
+Hiểu rõ hơn về việc huấn luyện model  trả về kết quả sau khi chạy <br>
 
 
 ### Báo cáo Lab 9
 ### Exercise 1: Downloading Files with Python.
-Mục tiêu
-Trong bài tập này, mục tiêu là tải về các tệp từ các URL HTTP được cung cấp, giải nén các tệp zip, và lưu chúng vào thư mục downloads dưới dạng tệp CSV. Quá trình này cũng yêu cầu việc sử dụng thư viện Python như requests để tải tệp và zipfile để giải nén.
-Các công cụ sử dụng
-requests: Để tải các tệp từ các URL HTTP.
-zipfile: Để giải nén các tệp zip.
-os: Để tạo thư mục nếu nó chưa tồn tại.
-asyncio và aiohttp (tuỳ chọn nâng cao): Để tải các tệp đồng thời (asynchronously) nhằm cải thiện hiệu suất.
-ThreadPoolExecutor (tuỳ chọn nâng cao): Để thực hiện tải tệp song song, tận dụng nhiều luồng.
-Các bước thực hiện:
-Bước 1: Tạo thư mục downloads
-Bước 2: Tải tệp từ URL
-Bước 3: Giải nén tệp zip
-Bước 4: Kết hợp các bước và thực hiện tải và giải nén
-Bước 5: Nâng cao với Async và ThreadPoolExecutor
-Để cải thiện hiệu suất, ta có thể sử dụng aiohttp và asyncio để tải các tệp đồng thời. 
+Mục tiêu <br> 
+Trong bài tập này, mục tiêu là tải về các tệp từ các URL HTTP được cung cấp, giải nén các tệp zip, và lưu chúng vào thư mục downloads dưới dạng tệp CSV. Quá trình này cũng yêu cầu việc sử dụng thư viện Python như requests để tải tệp và zipfile để giải nén. <br>
+Các công cụ sử dụng <br>
+requests: Để tải các tệp từ các URL HTTP. <br>
+zipfile: Để giải nén các tệp zip. <br>
+os: Để tạo thư mục nếu nó chưa tồn tại. <br>
+asyncio và aiohttp (tuỳ chọn nâng cao): Để tải các tệp đồng thời (asynchronously) nhằm cải thiện hiệu suất. <br>
+ThreadPoolExecutor (tuỳ chọn nâng cao): Để thực hiện tải tệp song song, tận dụng nhiều luồng. <br>
+Các bước thực hiện: <br>
+Bước 1: Tạo thư mục downloads <br>
+Bước 2: Tải tệp từ URL <br>
+Bước 3: Giải nén tệp zip <br>
+Bước 4: Kết hợp các bước và thực hiện tải và giải nén <br>
+Bước 5: Nâng cao với Async và ThreadPoolExecutor <br>
+Để cải thiện hiệu suất, ta có thể sử dụng aiohttp và asyncio để tải các tệp đồng thời.  <br>
 
-### Exercise 2: WebScraping and File Downloading with Python.
-Mục tiêu
-Trong bài tập này, mục tiêu là tải về tệp dữ liệu thời tiết từ một trang web của chính phủ, sử dụng kỹ thuật WebScraping để tìm tệp dữ liệu dựa trên dấu thời gian "Last Modified". Sau đó, tải tệp xuống, mở nó bằng Pandas và tìm các bản ghi có nhiệt độ cao nhất, cụ thể là thuộc tính HourlyDryBulbTemperature.
-Các công cụ sử dụng
-requests: Để tải trang HTML.
-BeautifulSoup: Để phân tích và trích xuất thông tin từ HTML (WebScraping).
-pandas: Để xử lý và phân tích dữ liệu trong tệp CSV.
-os: Để lưu tệp tải xuống.
-Các bước thực hiện
-Bước 1: Web Scraping trang HTML để tìm tệp phù hợp
-Bước 2: Tải tệp về và lưu tệp vào thư mục
-Bước 3: Mở tệp với Pandas và tìm bản ghi có nhiệt độ cao nhất
-Bước 4: Kết hợp các bước trên trong hàm main
-Bước 5: Chạy mã
+### Exercise 2: WebScraping and File Downloading with Python. 
+Mục tiêu <br>
+Trong bài tập này, mục tiêu là tải về tệp dữ liệu thời tiết từ một trang web của chính phủ, sử dụng kỹ thuật WebScraping để tìm tệp dữ liệu dựa trên dấu thời gian "Last Modified". Sau đó, tải tệp xuống, mở nó bằng Pandas và tìm các bản ghi có nhiệt độ cao nhất, cụ thể là thuộc tính HourlyDryBulbTemperature. <br>
+Các công cụ sử dụng <br>
+requests: Để tải trang HTML. <br>
+BeautifulSoup: Để phân tích và trích xuất thông tin từ HTML (WebScraping). <br>
+pandas: Để xử lý và phân tích dữ liệu trong tệp CSV. <br>
+os: Để lưu tệp tải xuống. <br>
+Các bước thực hiện <br>
+Bước 1: Web Scraping trang HTML để tìm tệp phù hợp <br>
+Bước 2: Tải tệp về và lưu tệp vào thư mục <br>
+Bước 3: Mở tệp với Pandas và tìm bản ghi có nhiệt độ cao nhất <br>
+Bước 4: Kết hợp các bước trên trong hàm main <br>
+Bước 5: Chạy mã <br>
 
-### Exercise 3: Boto3 AWS + s3 + Python.
-Mục tiêu: \
-(+) Exercise 3 hướng dẫn bạn cách làm việc với AWS S3 thông qua thư viện boto3 trong Python.
-(+) Nhiệm vụ chính của bài tập này là tải một file từ S3, giải nén file .gz và tải một file khác từ URL bên trong file đó.
-(+) Cụ thể, bạn cần tải một file .gz từ S3 chứa một danh sách các file (theo đường dẫn của chúng). Sau khi tải và giải nén file này, bạn sẽ lấy đường dẫn đến file .wet đầu tiên và tiếp tục tải nó về từ S3 rồi in các dòng trong file đó ra.
-Vấn đề gặp phải:
-(+) Khi chạy ứng dụng trong Docker, bạn gặp phải lỗi AccessDenied khi sử dụng boto3 để truy cập S3, mặc dù dữ liệu Common Crawl thường là công khai.
-(+) Giải pháp là tải file trực tiếp qua HTTP(S) thay vì dùng boto3 để tránh vấn đề quyền truy cập.
-
+### Exercise 3: Boto3 AWS + s3 + Python. 
+Mục tiêu: <br>
+(+) Exercise 3 hướng dẫn bạn cách làm việc với AWS S3 thông qua thư viện boto3 trong Python. <br> 
+(+) Nhiệm vụ chính của bài tập này là tải một file từ S3, giải nén file .gz và tải một file khác từ URL bên trong file đó. <br> 
+(+) Cụ thể, bạn cần tải một file .gz từ S3 chứa một danh sách các file (theo đường dẫn của chúng). Sau khi tải và giải nén file này, bạn sẽ lấy đường dẫn đến file .wet đầu tiên và tiếp tục tải nó về từ S3 rồi in các dòng trong file đó ra. <br> 
+Vấn đề gặp phải: <br> 
+(+) Khi chạy ứng dụng trong Docker, bạn gặp phải lỗi AccessDenied khi sử dụng boto3 để truy cập S3, mặc dù dữ liệu Common Crawl thường là công khai. <br>
+(+) Giải pháp là tải file trực tiếp qua HTTP(S) thay vì dùng boto3 để tránh vấn đề quyền truy cập. <br>
+ 
 ### Exercise 4: Convert JSON to CSV + Ragged Directories.
-Mục tiêu
-Trong bài tập này, mục tiêu là tìm tất cả các tệp JSON trong thư mục dữ liệu (data) và sau đó chuyển đổi các tệp JSON đó thành tệp CSV. Quá trình này yêu cầu:
-Duyệt qua cấu trúc thư mục để tìm tất cả các tệp JSON.
-Đọc các tệp JSON và giải nén dữ liệu từ cấu trúc JSON.
-Chuyển đổi dữ liệu JSON thành dạng phẳng và ghi vào tệp CSV.
-Các công cụ sử dụng
-Để hoàn thành bài tập này, tôi đã sử dụng các gói Python sau:
-glob: Để tìm các tệp trong một thư mục và cấu trúc con.
-json: Để đọc và xử lý các tệp JSON.
-csv: Để chuyển đổi dữ liệu JSON thành CSV và ghi vào tệp
+Mục tiêu <br> 
+Trong bài tập này, mục tiêu là tìm tất cả các tệp JSON trong thư mục dữ liệu (data) và sau đó chuyển đổi các tệp JSON đó thành tệp CSV. Quá trình này yêu cầu: <br>
+Duyệt qua cấu trúc thư mục để tìm tất cả các tệp JSON. <br>
+Đọc các tệp JSON và giải nén dữ liệu từ cấu trúc JSON. <br>
+Chuyển đổi dữ liệu JSON thành dạng phẳng và ghi vào tệp CSV. <br>
+Các công cụ sử dụng <br>
+Để hoàn thành bài tập này, tôi đã sử dụng các gói Python sau: <br>
+glob: Để tìm các tệp trong một thư mục và cấu trúc con. <br>
+json: Để đọc và xử lý các tệp JSON. <br>
+csv: Để chuyển đổi dữ liệu JSON thành CSV và ghi vào tệp <br>
 
-### Exercise 5: Data Modeling for Postgres + Python.
-Mục tiêu
-Trong bài tập này, tôi sẽ thực hành các kỹ năng liên quan đến mô hình dữ liệu, lập trình Python và làm việc với cơ sở dữ liệu Postgres. Mục tiêu là tạo các câu lệnh CREATE SQL cho các bảng dựa trên dữ liệu trong các tệp CSV, sau đó sử dụng psycopg2 để kết nối đến Postgres và thực thi các câu lệnh SQL để tạo bảng và nhập dữ liệu.
-Các công cụ sử dụng
-psycopg2: Thư viện Python để kết nối và tương tác với cơ sở dữ liệu Postgres.
-PostgreSQL: Cơ sở dữ liệu quan hệ để lưu trữ dữ liệu.
-CSV: Tệp dữ liệu cần được chuyển đổi thành bảng trong cơ sở dữ liệu.
-Các bước thực hiện
-Bước 1: Phân tích các tệp CSV
-Bước 2: Thiết kế câu lệnh SQL CREATE TABLE
-Bước 3: Kết nối với Postgres sử dụng psycopg2
-Bước 4: Nhập dữ liệu từ các tệp CSV vào bảng
-Bước 5: Kiểm tra và hoàn thanh
-
+### Exercise 5: Data Modeling for Postgres + Python. 
+Mục tiêu <br>
+Trong bài tập này, tôi sẽ thực hành các kỹ năng liên quan đến mô hình dữ liệu, lập trình Python và làm việc với cơ sở dữ liệu Postgres. Mục tiêu là tạo các câu lệnh CREATE SQL cho các bảng dựa trên dữ liệu trong các tệp CSV, sau đó sử dụng psycopg2 để kết nối đến Postgres và thực thi các câu lệnh SQL để tạo bảng và nhập dữ liệu. <br>
+Các công cụ sử dụng <br>
+psycopg2: Thư viện Python để kết nối và tương tác với cơ sở dữ liệu Postgres. <br>
+PostgreSQL: Cơ sở dữ liệu quan hệ để lưu trữ dữ liệu. <br>
+CSV: Tệp dữ liệu cần được chuyển đổi thành bảng trong cơ sở dữ liệu. <br>
+Các bước thực hiện <br>
+Bước 1: Phân tích các tệp CSV <br>
+Bước 2: Thiết kế câu lệnh SQL CREATE TABLE <br>
+Bước 3: Kết nối với Postgres sử dụng psycopg2 <br>
+Bước 4: Nhập dữ liệu từ các tệp CSV vào bảng <br>
+Bước 5: Kiểm tra và hoàn thanh <br>
+ 
 ### Exercise 6: Ingestion and Aggregation with PySpark.
-Mục tiêu
+Mục tiêu <br>
 Trong bài tập này, tôi làm việc với PySpark, một công cụ quan trọng trong hệ sinh thái Big Data, để phân tích dữ liệu hành trình xe đạp từ các tệp CSV được nén (.zip). Mục tiêu là sử dụng PySpark để:
-Đọc dữ liệu nén.
-Thực hiện các phép tính thống kê.
-Xuất kết quả ra thư mục reports/ dưới dạng CSV.
-Công cụ sử dụng
-Apache Spark (thông qua PySpark)
-Python (trong Docker)
-Docker/Docker Compose (để thiết lập môi trường chạy Spark không phụ thuộc máy chủ)
-CSV / ZIP File Handling
-Vấn đề gặp phải
-Chưa không thể cài đặt Java trên máy tính cá nhân, dẫn đến việc không thể chạy được Spark cục bộ ngoài Docker. Spark yêu cầu Java để hoạt động (thường là Java 8 hoặc 11)
+Đọc dữ liệu nén. <br>
+Thực hiện các phép tính thống kê. <br>
+Xuất kết quả ra thư mục reports/ dưới dạng CSV. <br>
+Công cụ sử dụng  <br>
+Apache Spark (thông qua PySpark) <br>
+Python (trong Docker) <br>
+Docker/Docker Compose (để thiết lập môi trường chạy Spark không phụ thuộc máy chủ) <br>
+CSV / ZIP File Handling <br>
+Vấn đề gặp phải <br>
+Chưa không thể cài đặt Java trên máy tính cá nhân, dẫn đến việc không thể chạy được Spark cục bộ ngoài Docker. Spark yêu cầu Java để hoạt động (thường là Java 8 hoặc 11) <br>
 
 ### Exercise 7: Using Various PySpark Functions
-Mục tiêu \
+Mục tiêu <br>
 Bài tập này yêu cầu xử lý và phân tích dữ liệu lỗi ổ cứng từ file .zip chứa CSV với PySpark bằng các hàm có sẵn trong pyspark.sql.functions mà không được sử dụng UDF hoặc phương thức Python.
-Công cụ và công nghệ sử dụng\
-PySpark\
-Spark SQL Functions (from pyspark.sql.functions import *)
-
-Docker / Docker Compose (thiết lập môi trường giả lập Spark)
-
-Zip handling + CSV parsing
-
-DataFrame transformations
+Công cụ và công nghệ sử dụng <br>
+PySpark <br>
+Spark SQL Functions (from pyspark.sql.functions import *) <br>
+Docker / Docker Compose (thiết lập môi trường giả lập Spark) <br>
+Zip handling + CSV parsing <br>
+DataFrame transformations <br>
 
 
 
