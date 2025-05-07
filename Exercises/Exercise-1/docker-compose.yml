@@ -1,12 +1,9 @@
-version: "3.9"
+version: '3.8'
 services:
-  test:
-    image: "exercise-1"
-    volumes:
-      - .:/app
-    command: python3 -m pytest
   run:
-    image: "exercise-1"
+    image: exercise-1
+    build:
+      context: .
+      dockerfile: Dockerfile
     volumes:
-      - .:/app
-    command: python3 main.py
+      - ./downloads:/app/downloads
