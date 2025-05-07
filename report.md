@@ -90,7 +90,7 @@ Bước 4: Kết hợp các bước trên trong hàm main
 Bước 5: Chạy mã
 
 ### Exercise 3: Boto3 AWS + s3 + Python.
-Mục tiêu: 
+$$ Mục tiêu:  $$\
 (+) Exercise 3 hướng dẫn bạn cách làm việc với AWS S3 thông qua thư viện boto3 trong Python.
 (+) Nhiệm vụ chính của bài tập này là tải một file từ S3, giải nén file .gz và tải một file khác từ URL bên trong file đó.
 (+) Cụ thể, bạn cần tải một file .gz từ S3 chứa một danh sách các file (theo đường dẫn của chúng). Sau khi tải và giải nén file này, bạn sẽ lấy đường dẫn đến file .wet đầu tiên và tiếp tục tải nó về từ S3 rồi in các dòng trong file đó ra.
