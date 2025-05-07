@@ -1,5 +1,5 @@
-Báo cáo Lab 8\
-Case-study 1: Xây dựng pipeline tự động cào và trực quan dữ liệu \
+### Báo cáo Lab 8\
+### Case-study 1: Xây dựng pipeline tự động cào và trực quan dữ liệu \
 Phương pháp: Sử dụng mô hình ETL (Extract, Transform, Load) để thực hiện và sử dụng AirFlow để tự động hóa pipeline
 Các bước:
 B1: Thu thập dữ liệu (file csv, mysql)
