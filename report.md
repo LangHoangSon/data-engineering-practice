@@ -5,11 +5,12 @@ Các bước:
 B1: Thu thập dữ liệu (file csv, mysql)
 B2: Viết script Python để xử lí trích xuất dữ liệu
 B3: Tải (Load) dữ liệu lên phần mềm PostgreSQL + Pandas
-B4: Trực quan hóa trên PowerBI\
+B4: Trực quan hóa trên PowerBI
 
 
 ![image](https://github.com/user-attachments/assets/c89b1d4b-aff0-4c3b-966a-eb685d85e314)
 ![image](https://github.com/user-attachments/assets/0a58dbe6-6842-4ac8-ace5-6ddf6aa34670)
+
 Đây là bức ảnh mô tả về Data Warehouse (Kho dữ liệu), với các bước từ nguồn dữ liệu ban đầu cho đến tầng cuối cùng là tầng ngữ nghĩa (semantic). Dưới đây là giải thích chi tiết từng thành phần:\
 1. Data Source: Đây là nơi dữ liệu bắt đầu (file CSV, file log, sql,…)
 2. Landing: lưu trữ tạm thời trước khi xử lí, dùng để kiểm tra và xác minh
@@ -142,9 +143,12 @@ Mục tiêu\
 Bài tập này yêu cầu xử lý và phân tích dữ liệu lỗi ổ cứng từ file .zip chứa CSV với PySpark bằng các hàm có sẵn trong pyspark.sql.functions mà không được sử dụng UDF hoặc phương thức Python.
 Công cụ và công nghệ sử dụng\
 PySpark\
-Spark SQL Functions (from pyspark.sql.functions import *)\
-Docker / Docker Compose (thiết lập môi trường giả lập Spark)\
-Zip handling + CSV parsing\
+Spark SQL Functions (from pyspark.sql.functions import *)
+
+Docker / Docker Compose (thiết lập môi trường giả lập Spark)
+
+Zip handling + CSV parsing
+
 DataFrame transformations
 
 
