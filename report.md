@@ -1,5 +1,5 @@
 Báo cáo Lab 8
-Case-study 1: Xây dựng pipeline tự động cào và trực quan dữ liệu
+$ Case-study 1: Xây dựng pipeline tự động cào và trực quan dữ liệu $\
 Phương pháp: Sử dụng mô hình ETL (Extract, Transform, Load) để thực hiện và sử dụng AirFlow để tự động hóa pipeline
 Các bước:
 B1: Thu thập dữ liệu (file csv, mysql)
@@ -14,7 +14,7 @@ B4: Trực quan hóa trên PowerBI
 3. Staging: Dữ liệu sẽ được làm sạch, chuẩn hóa và chuẩn bị đưa vào kho dữ liệu
 4. Dim – Fact – Agg (Bảng chiều – Bảng sự kiện – Tổng hợp)
 5. Semantic: nơi các công cụ PowerBI hoặc ngươci dùng truy cập
-![image](https://github.com/user-attachments/assets/6435e6f9-29b2-42ad-86c7-0ca0e1d54c5b)
+
 Đây là cấu trúc thư mục của một dự án ETL & Data Warehouse cho E-commerce sử dụng Airflow và Python. Dưới đây là giải thích chi tiết cho từng phần:
 1. config/: Có thể chứa các file cấu hình (config) như thông tin kết nối database, đường dẫn, biến môi trường,..
 2. dags/: Chứa các DAGs dùng cho AirFlow.
