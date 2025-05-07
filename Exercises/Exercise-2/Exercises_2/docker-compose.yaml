@@ -1,0 +1,7 @@
+version: "3.8"
+services:
+  weather-data:
+    build: .
+    volumes:
+      - .:/app
+    command: python /app/main.py
