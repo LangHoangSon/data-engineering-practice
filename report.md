@@ -5,7 +5,9 @@ Các bước:
 B1: Thu thập dữ liệu (file csv, mysql)
 B2: Viết script Python để xử lí trích xuất dữ liệu
 B3: Tải (Load) dữ liệu lên phần mềm PostgreSQL + Pandas
-B4: Trực quan hóa trên PowerBI
+B4: Trực quan hóa trên PowerBI\
+
+
 ![image](https://github.com/user-attachments/assets/c89b1d4b-aff0-4c3b-966a-eb685d85e314)
 ![image](https://github.com/user-attachments/assets/0a58dbe6-6842-4ac8-ace5-6ddf6aa34670)
 Đây là bức ảnh mô tả về Data Warehouse (Kho dữ liệu), với các bước từ nguồn dữ liệu ban đầu cho đến tầng cuối cùng là tầng ngữ nghĩa (semantic). Dưới đây là giải thích chi tiết từng thành phần:\
@@ -42,7 +44,7 @@ Có hỗ trợ plugin mở rộng cho các database phổ biến.
 ### Case-study 2: Xây dựng pipeline tự động cào dữ liệu và huấn luyện mô hình
 Mục tiêu: Xây dựng và chạy thử được các DAGs cơ bản đến nâng cao
 Công cụ: Sử dụng AirFlow để chạy pipeline với cài đặt thời gian
-Cấu trúc mô tả của 1 AirFlow
+Cấu trúc mô tả của 1 AirFlow\
 ![image](https://github.com/user-attachments/assets/1c40c9fc-d74c-47f6-9b61-5d852e5b6f5a)
 
 ![image](https://github.com/user-attachments/assets/64ebbf9c-180e-4f88-8670-582ca8d6a4b5)
@@ -136,13 +138,13 @@ Vấn đề gặp phải
 Chưa không thể cài đặt Java trên máy tính cá nhân, dẫn đến việc không thể chạy được Spark cục bộ ngoài Docker. Spark yêu cầu Java để hoạt động (thường là Java 8 hoặc 11)
 
 ### Exercise 7: Using Various PySpark Functions
-Mục tiêu
+Mục tiêu\
 Bài tập này yêu cầu xử lý và phân tích dữ liệu lỗi ổ cứng từ file .zip chứa CSV với PySpark bằng các hàm có sẵn trong pyspark.sql.functions mà không được sử dụng UDF hoặc phương thức Python.
-Công cụ và công nghệ sử dụng
-PySpark
-Spark SQL Functions (from pyspark.sql.functions import *)
-Docker / Docker Compose (thiết lập môi trường giả lập Spark)
-Zip handling + CSV parsing
+Công cụ và công nghệ sử dụng\
+PySpark\
+Spark SQL Functions (from pyspark.sql.functions import *)\
+Docker / Docker Compose (thiết lập môi trường giả lập Spark)\
+Zip handling + CSV parsing\
 DataFrame transformations
 
 
