@@ -1,12 +1,14 @@
-version: "3.9"
+# docker-compose.yml
+
+version: '3.8'
+
 services:
-    test:
-      image: "exercise-6"
-      volumes:
-        - .:/app
-      command: python3 -m pytest
-    run:
-      image: "exercise-6"
-      volumes:
-        - .:/app
-      command: /spark/bin/spark-submit main.py
+  run:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: exercise6_runner
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: python3 main.py
